@@ -1,0 +1,387 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700');
+
+//fonts necessaire
+$font_primary : "Roboto";
+$font_secondary : "Roboto Condensed";
+
+// Update Bulma's global variables
+$family-sans-serif: $font_primary;
+
+// font - size
+$size_text: 22.9px;//1rem; // 22.9px; //regular
+// 41.7px;
+
+$size_h1: 6.818rem; // 150px
+$size_h2: 3.409rem; // 75px
+// 3rem text Bienvenue
+// text presentation 2.455rem
+//$size_nav: //1.864rem;
+//$size_h3: //1.5rem; // 33.3 light base 18
+//$size_h4:// 1.364rem; // 30px
+// contact 1.136rem 25 px
+// text 1rem
+
+//$size-1: 18.679950186799502vh;//9.545rem;// h1 210px 44.21052631578947vw
+$size-2: 5rem; // h2 110px
+$size-3: 22.9px;//1rem; // base
+$size-4: 2.455rem; // présentation bienveue
+$size-5: 1.864rem; // navbar
+$size-6: 33.3px;//1.5rem;//33.3px;//1.833rem;//185%;// h3 33.3 light base 18
+$size-7: 1.364rem;// h4 // 30px
+//@import "~bulma/bulma";
+@import '../../node_modules/bulma/bulma.sass';
+// @import '../../node_modules/bulma/sass/utilities/initial-variables.sass';
+// Import only what you need from Bulma
+// @import "../../node_modules/bulma/sass/utilities/_all.sass";
+// @import "../../node_modules/bulma/sass/base/_all.sass";
+// // @import "../../node_modules/bulma/sass/elements/button.sass";
+// @import "../../node_modules/bulma/sass/elements/container.sass";
+// // @import "../../node_modules/bulma/sass/elements/title.sass";
+// @import "../../node_modules/bulma/sass/layout/section.sass";
+
+/********************************/
+/*      Backgrounds/Couleurs    */
+/********************************/
+$bg_header : url("../../public/img/backgrounds/bg_header.jpg");
+$bg_presentation: url("../../public/img/backgrounds/bg_presentation_test.jpg");
+$bg_competence : url("../../public/img/backgrounds/bg_competence.jpg");
+$bg_formation: url("../../public/img/backgrounds/bg_formation.jpg");
+$bg_contact : url("../../public/img/backgrounds/bg_contact.jpg");
+$bg_banner:url("../../public/img/backgrounds/bg_banner.jpg");
+
+$bg_basic_1:linear-gradient(rgba(55, 67, 85, 0.7),rgba(55, 67, 85, 0.7)); //374355 55,67,85
+$bg_basic_2:linear-gradient(rgba(61, 77, 101, 0.7),rgba(61, 77, 101, 0.7)); //3D4D65 61,77,101
+
+//couleurs
+$rose : #C48CBB; // hover item
+$gris : rgba(201,211,223,0.5); // input/textarea //gauche séparation contact
+$gris_sombre:rgba(83,101,125,0.5); //droite séparation contact
+$blanc: #F8F8F8;
+$bleu_transparent : rgba(61, 77, 101, 0.5);
+$pourpre_transparent : rgba(131, 147, 167, 0.1);
+
+
+//$height_page:1080px;//20%; // 1080px
+/********************************/
+/*            Body              */
+/********************************/
+html{
+    font-size: 100%;
+}
+body{
+    height: auto;
+    font-style: normal;
+    font-size: $size-3;
+    color:#FFFFFF;
+}
+.section#home_page .media{
+    justify-content: center;
+    vertical-align: middle;
+    height: 400px;
+    margin:250px auto 150px;
+}
+.title{
+    font-weight: 400;
+}
+.subtitle {
+    color:$blanc;
+}
+.content h1:not(:first-child),.content h2:not(:first-child){
+    margin :0%;
+}
+.content h1, .content h2, .content h3, .content h4{
+    color:$blanc;
+    text-align: center;
+    font-variant: small-caps;
+}
+.content h1, .content h2{
+    font-family: $font_secondary;
+}
+.content h2,.content h3{
+    font-weight: 300;
+}
+.content h1{
+    line-height: 22vh;
+    letter-spacing:15px;
+    font-size: 150px;
+}
+.content h2{
+    line-height: 1vh;
+    letter-spacing:5px;
+}
+.content h3{
+    line-height: 100px;
+}
+.content h4{
+    font-weight: 400;
+    line-height: 50px;
+}
+#down{
+    text-align: center;
+    vertical-align: bottom;
+}
+
+/********************************/
+/*            Bones site        */
+/********************************/
+
+#portfolio.section.section{
+    padding:0%;
+}
+.container.is-fluid{
+    margin:0%;
+}
+#home_page{
+    width: 100%;
+    background:$bg_basic_1,$bg_header;
+}
+#presentation_page {
+    background-image: $bg_basic_2,$bg_presentation;
+}
+
+#competences_page {
+    background: $bg_basic_1,$bg_competence;
+}
+#formations_page {
+   // height: $height_page;
+    background: $bg_basic_1,$bg_formation;
+
+}
+.footer{
+    background: $bg_basic_1,$bg_contact;
+    padding:0%;
+    margin:0%;
+    #contact{
+        height: 72.2%;//780px
+    }
+    #banner{
+        height:27.8%;//300px
+        background: $bg_banner bottom;
+    }
+}/*
+#home_page,#presentation_page,#competences_page,#formations_page,.footer{
+     height: $height_page;
+}*/
+#home_page,#presentation_page,#competences_page,#formations_page,.footer #banner,.footer #contact{
+    padding:50px;
+}
+#home_page,#presentation_page,#competences_page,#formations_page,.footer,.footer #banner{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+@media screen and (min-width: 1088px){
+    .navbar > .container .navbar-brand, .container > .navbar .navbar-brand {
+        margin-left:0%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .content h1{
+        line-height: 22vh;
+        letter-spacing:15px;
+        font-size: 150px;
+    }
+}
+
+/********************************/
+/*            Home              */
+/********************************/
+.navbar {
+    background-color: transparent;
+    height: 150px;//150px;
+    .navbar-item:nth-child(-n+4){
+        color:$blanc;
+        margin:3.98%; // 76.5px x2 = distance entre 2 items
+    }
+}
+
+a{
+    text-align: center;
+}
+a.navbar-item p{
+    padding:0%;
+    border-bottom: 4px solid transparent;
+}
+a.navbar-item:hover{
+    background-color: transparent;
+    p{
+        color:$blanc;
+        border-bottom: 4px solid $rose;
+        border-radius: 5px;
+    }
+}
+
+/********************************/
+/*            Présentation      */
+/********************************/
+// 3rem text Bienvenue
+// 250px photo height
+
+#photo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.subtitle span{
+    font-size: 3rem;
+}
+.columns .column p{
+    height: 100%;
+}
+.card{
+    height: 100%;
+    background-color: transparent;
+    color: $blanc;
+    box-shadow: none;
+    .card-image .image{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-content{
+        //height: 100%;
+        padding:30px;
+        background-color: $pourpre_transparent;// 
+        border-radius:1.455em;
+        display: flex;
+        .content{
+            margin:auto;
+        }
+    }
+}
+.card-content .content{
+    font-size: $size-3;
+    width: 100%;
+}
+/********************************/
+/*          Compétences         */
+/********************************/
+
+#logo_env .media-content .image img{
+    height: 62px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.content .figure:not(:first-child),.content .figure:not(:last-child){
+    margin-top:0%;
+    margin:auto;
+}
+.box, .card-header{
+    background-color: transparent;
+    box-shadow: none;
+}
+.progress{
+   // float: right;
+    width:90%;
+    height: 25px;
+    margin:auto;
+}
+.stats_skills{
+    width: 100px;
+}
+.media.list-skill{
+    height:35px;
+}
+.card-header-title{
+    padding:0%;
+}
+.card-header-title:last-child p{
+    margin: auto;
+}
+/********************************/
+/*          Contacter           */
+/********************************/
+#form_contact p:nth-last-child(1){
+    font-style: italic;
+}
+#btn_envoyer{
+    float: right;
+    background-color: transparent;
+    color: $blanc;
+    width:170px;
+    height: 40px;
+    border: 0.4pt solid $blanc;
+    border-radius: 0px;
+    font-family: $font_secondary;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 25px;//1.136rem;//$size_contact;//0.759em;//16.7px;
+}
+.input, .textarea{
+    background-color: $gris;
+    border-radius:0.795em; //25% = 17.5px 0.795em
+    color:$blanc;
+}
+.textarea.is-large {
+    height: 190px;
+}
+.input{
+   height: 70px;//3.182em;//70px;// 
+   padding: 0px;
+}
+.input::placeholder,.textarea::placeholder{
+    font-size: 20.8px;
+    font-weight: 500;
+    font-style: italic;
+    padding-left:20px;
+    line-height: 35px;
+}
+.field{
+    padding-bottom: 40px;
+}
+
+#form_bg{
+    background-color:transparent;
+}
+#separation{ // 1.8px 460px couleur: left: rgba(201,211,223,0.5) right: rgba(83,101,125,0.5)
+    width: 0px;
+    height: 460px;
+    border-left:1.8px solid $gris;
+    border-right:1.8px solid $gris_sombre;
+    margin :0px;
+    float: left;
+}
+.column iframe{
+    width: 80%;
+    height: 100%;
+    margin-left:15%;
+}
+/********************************/
+/*          Footer              */
+/********************************/
+
+#rs_separation{ //2.5px 170px color:
+    width:50%;
+    height: 0px;
+    border-bottom: 2.5px solid rgba(55, 67, 85, 1);
+    margin:auto;
+}
+// détails
+#details.content .figure {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+// réseaux sociaux/*
+#reseaux_sociaux .media-content .figure{
+    margin: 10% auto 0%;
+}
+#reseaux_sociaux .media-content .figure img{
+    height: 100%;
+    text-align: center;
+}
+// auteur
+#by_author{
+    //text-align: end;
+   // margin-top:20%;
+    font-family: $font_secondary;
+    font-weight: 300;
+    font-size:25px;
+    text-align: center;
+    line-height: 150px;
+}
