@@ -37,6 +37,10 @@ export default class FormsPage extends Component {
         }
 
     }*/
+    handleChange() {
+        console.log("test");
+      }
+
     render() {
         return (
             <Field id="SendMessage">

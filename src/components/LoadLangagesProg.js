@@ -1,4 +1,5 @@
-import React,{Component} from 'react';
+import React,{h,Component} from 'react';
+import ReactDOM from "react-dom";
 import { Progress, Media, Content } from 'react-bulma-components'
 
 const langages = (
@@ -23,7 +24,7 @@ const mapIter = langages.values()
 class LoadLangagesProg extends Component {
     
 
-    render() {
+    loadProg() {
         const listItems = []
 
         for (let i = 0; i < langages.length; i++) {
@@ -40,18 +41,19 @@ class LoadLangagesProg extends Component {
             }
             // listItems.push(<div class="item_skill"><p>{item[0]}</p><Progress class={valeur} color={couleur} max={100} value={item[1]} /></div>)
             listItems.push(
-                <Media renderAs="article" className="list-skill">
+                <Media key={item[0]} renderAs="article" className="list-skill">
                     <Media.Item renderAs="p" align="left" className="stats_skills">
                         {item[0]}
                     </Media.Item>
                     <Content>
-                        <Progress class={valeur} color={couleur} max={100} value={item[1]} />
+                        <Progress className={valeur} color={couleur} max={100} value={item[1]} />
                     </Content>
                 </Media>
             )
         }
         // console.log(listItems)
-        return (<div class="text_skill list-skill">{listItems}</div>)
+        return (<div className="text_skill list-skill">{listItems}</div>)
+        // return(listItems)
     }
     // render() {
     //     return this.load()
