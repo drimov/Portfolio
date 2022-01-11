@@ -42,11 +42,11 @@ class LoadLangagesProg extends Component {
             // listItems.push(<div class="item_skill"><p>{item[0]}</p><Progress class={valeur} color={couleur} max={100} value={item[1]} /></div>)
             listItems.push(
                 <Media key={item[0]} renderAs="article" className="list-skill">
-                    <Media.Item renderAs="p" align="left" className="stats_skills">
+                    <Media.Item align="left" className="stats_skills">
                         {item[0]}
                     </Media.Item>
                     <Content>
-                        <Progress className={valeur} color={couleur} max={100} value={item[1]} />
+                        <Progress className={valeur} size='small' color={couleur} max={100} value={item[1]} />
                     </Content>
                 </Media>
             )

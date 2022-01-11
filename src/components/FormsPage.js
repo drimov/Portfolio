@@ -1,26 +1,23 @@
-import { Component } from 'react';
-import {Form, Button} from "react-bulma-components";
+import { Component } from "react";
+import { Form, Button } from "react-bulma-components";
 //import Field from 'react-bulma-components'
 
-const { Input, Field, Control, Label,Textarea } = Form;
-const textFullname = ''
-const textEmail = ''
-const textMessage = ''
-
+const { Input, Field, Control, Label, Textarea } = Form;
+const textFullname = "";
+const textEmail = "";
+const textMessage = "";
 
 export default class FormsPage extends Component {
+  constructor() {
+    super();
 
-    constructor() {
-        super()
-
-        this.state = {
-            fullname: textFullname,
-            email: textEmail,
-            message: textMessage,
-        }
-
-    }
-    /*
+    this.state = {
+      fullname: textFullname,
+      email: textEmail,
+      message: textMessage,
+    };
+  }
+  /*
     tryClear(event) {
 
         // valeur dans l'input
@@ -37,26 +34,46 @@ export default class FormsPage extends Component {
         }
 
     }*/
-    handleChange() {
-        console.log("test");
-      }
+  handleChange() {
+    console.log("test");
+  }
 
-    render() {
-        return (
-            <Field id="SendMessage">
-                <Field className="is-grouped ">
-                    <Control className="is-expanded">
-                        <Input type="text" name="fullname" placeholder="Votre nom et prénom" value={this.state.fullname} onChange={this.handleChange} />
-                    </Control>
-                    <Control className="is-expanded">
-                        <Input type="email" name="email" placeholder="Votre email" value={this.state.email} onChange={this.handleChange} />
-                    </Control>
-                </Field>
-                <Field>
-                    <Textarea size="large" name="message" placeholder="Votre message.." value={this.state.message} onChange={this.handleChange} />
-                </Field>
-                <Button type="primary" id="btn_envoyer">envoyer</Button>
-            </Field>
-        );
-    }
+  render() {
+    return (
+      <Form.Field id="SendMessage">
+        <Field className="is-grouped">
+          <Control className="is-expanded">
+            <Input
+              type="text"
+              name="fullname"
+              placeholder="nom"
+              value={this.state.fullname}
+              onChange={this.handleChange}
+            />
+          </Control>
+          <Control className="is-expanded">
+            <Input
+              type="email"
+              name="email"
+              placeholder="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
+          </Control>
+        </Field>
+        <Field>
+          <Form.Textarea
+            size="large"
+            name="message"
+            placeholder="Votre message.."
+            value={this.state.message}
+            onChange={this.handleChange}
+          />
+        </Field>
+        <Button type="primary" id="btn_envoyer">
+          envoyer
+        </Button>
+      </Form.Field>
+    );
+  }
 }

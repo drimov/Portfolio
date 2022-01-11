@@ -15,7 +15,7 @@ export default class About extends Component {
         {/* Présentation */}
         <Container breakpoint="fluid">
           <Media>
-            <Media.Item align="left" className="is-hidden-touch">
+            <Media.Item align="left">
               <img src="./img/icons/hook_left.svg" width="60" />
             </Media.Item>
             <Content>
@@ -27,7 +27,7 @@ export default class About extends Component {
           </Media>
           <Columns>
             <Columns.Column size="one-fifth" id="photo">
-              <img src="./img/icons/photo.svg" width="250" />
+              <img src="./img/icons/profile.png" width="250" />
             </Columns.Column>
             <Columns.Column>
               <p className="subtitle is-4 has-text-centered">

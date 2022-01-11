@@ -13,7 +13,7 @@ export default class HomePage extends Component {
       <Section id="home_page">
         <Container breakpoint="fluid">
           {/* Header */} {/*Title x= 273 y=454 L:1380 T=404.5*/}
-          <Navbar is-transparent="true">
+          <Navbar transparent="true">
             {/* Logo */}
             <Navbar.Brand>
               <Navbar.Item>

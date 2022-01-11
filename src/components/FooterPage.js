@@ -61,7 +61,7 @@ export default class FooterPage extends Component {
               {/* Carte + détails */}
               <Columns>
                 <div id="separation"></div>
-                <Card>
+                <Card id="details">
                   <Card.Header>
                     <Card.Header.Title
                       renderAs="p"
@@ -71,7 +71,7 @@ export default class FooterPage extends Component {
                     </Card.Header.Title>
                   </Card.Header>
                   <Card.Content id="form_bg">
-                    <Content id="details">
+                    <Content>
                       <Media>
                         <Media.Item align="left">
                           <Image
