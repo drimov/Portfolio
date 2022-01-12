@@ -113,7 +113,7 @@ export default class HomePage extends Component {
           <Box>
             <Tile kind="ancestor">
               <Tile size={4} vertical>
-                <Tile size={8}>
+                {/* <Tile size={8}> */}
                   <Tile renderAs="article" kind="child">
                     {/* Environnements */}
                     <Card>
@@ -127,7 +127,7 @@ export default class HomePage extends Component {
                               />
                             </Media.Item>
                             <Content>
-                              <h4 className="subtitle is-7">Environnements</h4>
+                              <h4 className="subtitle is-7">Systèmes</h4>
                             </Content>
                             <Media.Item align="right">
                               <Image
@@ -149,13 +149,13 @@ export default class HomePage extends Component {
                             <Media.Item>
                               <Image
                                 src="./img/icons/windows_logo.svg"
-                                size={48}
+                                size={64}
                               />
                             </Media.Item>
                             <Media.Item>
                               <Image
                                 src="./img/icons/linux_logo.svg"
-                                size={48}
+                                size={64}
                               />
                             </Media.Item>
                           </Media>
@@ -163,7 +163,7 @@ export default class HomePage extends Component {
                       </Card.Content>
                     </Card>
                   </Tile>
-                </Tile>
+                {/* </Tile> */}
 
                 {/* Savoir faire */}
                 <Tile renderAs="article" kind="child">
@@ -201,8 +201,7 @@ export default class HomePage extends Component {
                           Pour les projets nécessitant une base de donnée, j'ai
                           la méthode Merise à disposition qui vise a structuré
                           la base de donnée pour éviter les différents problèmes
-                          et dysfonctionnements qui pourrait survenir sur le
-                          site.
+                          qui pourrait survenir sur le site.
                         </p>
                       </Content>
                     </Card.Content>

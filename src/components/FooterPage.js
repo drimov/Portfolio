@@ -1,17 +1,17 @@
 import { Component } from "react";
 
-import{
-    Container,
-    Content,
-    Columns,
-    Media,
-    Card,
-    Image,
-    Footer,
-    Section
+import {
+  Container,
+  Content,
+  Columns,
+  Media,
+  Card,
+  Image,
+  Footer,
+  Section,
 } from "react-bulma-components";
 
-import FormsPage from "./FormsPage"
+import FormsPage from "./FormsPage";
 
 export default class FooterPage extends Component {
   render() {
@@ -41,17 +41,18 @@ export default class FooterPage extends Component {
                       renderAs="p"
                       className="has-text-white has-text-weight-normal"
                     >
-                      N'hésitez pas à me contacter pour un projet intéressant ou innovant.
+                      N'hésitez pas à me contacter pour un projet intéressant ou
+                      innovant.
                     </Card.Header.Title>
                   </Card.Header>
                   <Card.Content id="form_bg">
                     <Content>
-                        <FormsPage />
+                      <FormsPage />
                       {/* <div id="form_page"> */}
-                        <p>
-                          Ps : Afin d'obtenir une vision concrète, je vous prie de
-                          détaillé l'ensemble de votre projet.
-                        </p>
+                      <p>
+                        Ps : Afin d'obtenir une vision concrète, je vous prie de
+                        détaillé l'ensemble de votre projet.
+                      </p>
                       {/* </div> */}
                     </Content>
                   </Card.Content>
@@ -80,7 +81,7 @@ export default class FooterPage extends Component {
                             size={24}
                           />
                         </Media.Item>
-                        <Content renderAs="p">Réunion</Content>
+                        <Content renderAs="p">Dunkerque</Content>
                       </Media>
                       <Media>
                         <Media.Item align="left">
@@ -105,13 +106,13 @@ export default class FooterPage extends Component {
                       <Media>
                         <Media.Item align="left">
                           <Image
-                            src="./img/icons/link_icon.svg"
+                            src="./img/icons/github_icon.svg"
                             alt="link"
                             size={24}
                           />
                         </Media.Item>
                         <Content renderAs="p">
-                          http://dimitrilhopital.com
+                        https://github.com/drimov
                         </Content>
                       </Media>
                     </Content>
@@ -122,30 +123,17 @@ export default class FooterPage extends Component {
           </Container>
         </Section>
         <Section id="banner">
-          <Columns>
-            <Columns.Column size="one-third" offset="one-third">
-              <div id="rs_separation"></div>
-              <Media id="reseaux_sociaux">
-                <Media.Item>
-                  <Image
-                    src="./img/icons/facebook_icon.svg"
-                    size={96}
-                    alt="facebook"
-                  />
-                </Media.Item>
-                <Media.Item>
-                  <Image
-                    src="./img/icons/twitter_icon.svg"
-                    size={96}
-                    alt="twitter"
-                  />
-                </Media.Item>
-              </Media>
-            </Columns.Column>
-            <Columns.Column>
-              <p id="by_author">2021 © Drimov</p>
-            </Columns.Column>
-          </Columns>
+          <Media>
+            <Media.Item>
+              <p className="footer-p">Bulma by</p>
+            </Media.Item>
+            <Media.Item>
+              <p className="footer-p">Drimov</p>
+            </Media.Item>
+            <Media.Item>
+            <p className="footer-p"> 2022 ©</p>
+            </Media.Item>
+          </Media>
         </Section>
       </Footer>
     );
