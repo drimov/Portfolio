@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 
 import {
   Container,
@@ -10,8 +10,7 @@ import {
   Footer,
   Section,
 } from "react-bulma-components";
-
-import FormsPage from "./FormsPage";
+import { FunctionForm } from "./FormsPage";
 
 export default class FooterPage extends Component {
   render() {
@@ -47,7 +46,7 @@ export default class FooterPage extends Component {
                   </Card.Header>
                   <Card.Content id="form_bg">
                     <Content>
-                      <FormsPage />
+                      <FunctionForm />
                       {/* <div id="form_page"> */}
                       <p>
                         Ps : Afin d'obtenir une vision concrète, je vous prie de
@@ -101,7 +100,11 @@ export default class FooterPage extends Component {
                             size={24}
                           />
                         </Media.Item>
-                        <Content renderAs="p">dimitrilho@gmail.com</Content>
+                        <Content renderAs="p">
+                          <a href="mailto:dimitrilho@gmail.com">
+                           Mon email
+                          </a>
+                        </Content>
                       </Media>
                       <Media>
                         <Media.Item align="left">
@@ -112,7 +115,9 @@ export default class FooterPage extends Component {
                           />
                         </Media.Item>
                         <Content renderAs="p">
-                        https://github.com/drimov
+                          <a href=" https://github.com/drimov">
+                            Mon Github
+                          </a>
                         </Content>
                       </Media>
                     </Content>
@@ -131,7 +136,7 @@ export default class FooterPage extends Component {
               <p className="footer-p">Drimov</p>
             </Media.Item>
             <Media.Item>
-            <p className="footer-p"> 2022 ©</p>
+              <p className="footer-p"> 2022 ©</p>
             </Media.Item>
           </Media>
         </Section>
