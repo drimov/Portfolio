@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, useState } from "react";
 import {
   Section,
   Container,
@@ -7,7 +7,31 @@ import {
   Media,
 } from "react-bulma-components";
 
+// const [isActive, setisActive] = useState(false);
+// const isState = false;
+
 export default class HomePage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isActive: false,
+      addClass: "",
+    };
+
+    this.handleOnclick = this.handleOnclick.bind(this);
+  }
+
+  handleOnclick(e) {
+    this.setState((state) => ({
+      isActive: state.isActive == true ? false : true,
+    }));
+    this.setState((state) => ({
+      addClass: state.isActive == true ? "is-active" : "",
+    }));
+    console.log(this.state.isActive);
+    console.log(this.state.addClass);
+  }
   render() {
     return (
       <Section id="home_page">
@@ -17,27 +41,28 @@ export default class HomePage extends Component {
             {/* Logo */}
             <Navbar.Brand>
               <Navbar.Item>
-                <img
+              <img
                   src="https://bulma.io/images/bulma-logo.png"
                   width="112"
                   height="28"
                 />
               </Navbar.Item>
-              <Navbar.Burger />
+              {/* this.setState(({isActive})=>({isActive: !isActive})) */}
+              <Navbar.Burger onClick={this.handleOnclick} className={this.state.addClass}/>
             </Navbar.Brand>
             {/*Navbar x= 670 y= 50 L:1200 T:150*/}
-            <Navbar.Menu>
+            <Navbar.Menu className={this.state.addClass}>
               <Navbar.Container align="right">
-                <Navbar.Item hrf="#">
+                <Navbar.Item href="#presentation_page">
                   <p className="title is-5 has-text-white">A propos</p>
                 </Navbar.Item>
-                <Navbar.Item hrf="#">
+                <Navbar.Item href="#view_resume">
+                  <p className="title is-5 has-text-white">Mon cv</p>
+                </Navbar.Item>
+                <Navbar.Item href="#competences_page">
                   <p className="title is-5 has-text-white">Compétences</p>
                 </Navbar.Item>
-                <Navbar.Item hrf="#">
-                  <p className="title is-5 has-text-white">Formations</p>
-                </Navbar.Item>
-                <Navbar.Item hrf="#">
+                <Navbar.Item href="#contact">
                   <p className="title is-5 has-text-white">Contact</p>
                 </Navbar.Item>
               </Navbar.Container>
