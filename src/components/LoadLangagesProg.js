@@ -1,5 +1,4 @@
 import React,{h,Component} from 'react';
-import ReactDOM from "react-dom";
 import { Progress, Media, Content } from 'react-bulma-components'
 
 const langages = (
@@ -16,9 +15,9 @@ const langages = (
     ]
 )
 const is_even = "is_even"
-const color_even = "primary"
+const color_even = "is-primary"
 const is_uneven = "is_uneven"
-const color_uneven = "danger"
+const color_uneven = "is-danger"
 const mapIter = langages.values()
 
 class LoadLangagesProg extends Component {
@@ -39,7 +38,6 @@ class LoadLangagesProg extends Component {
                 valeur = is_uneven
                 couleur = color_uneven
             }
-            // listItems.push(<div class="item_skill"><p>{item[0]}</p><Progress class={valeur} color={couleur} max={100} value={item[1]} /></div>)
             listItems.push(
                 <Media key={item[0]} renderAs="article" className="list-skill">
                     <Media.Item align="left" className="stats_skills">
@@ -51,12 +49,7 @@ class LoadLangagesProg extends Component {
                 </Media>
             )
         }
-        // console.log(listItems)
         return (<div className="text_skill list-skill">{listItems}</div>)
-        // return(listItems)
     }
-    // render() {
-    //     return this.load()
-    // }
 }
 export default LoadLangagesProg;
