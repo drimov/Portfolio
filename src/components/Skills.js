@@ -13,40 +13,32 @@ import {
 
 const langages = [
   {
-    langue: "HTML/CSS",
-    level: 70,
+    langue: "Android",
+    level: 60,
   },
   {
-    langue: "Php",
-    level: 80,
-  },
-  {
-    langue: "Javascript",
-    level: 75,
+    langue: "kotlin",
+    level: 55,
   },
   {
     langue: "Java",
     level: 60,
   },
   {
+    langue: "Php",
+    level: 80,
+  },
+  {
     langue: "Pl/Sql",
     level: 75,
   },
   {
-    langue: "Android",
-    level: 50,
+    langue: "HTML/CSS",
+    level: 70,
   },
   {
-    langue: "Vb",
-    level: 50,
-  },
-  {
-    langue: "Joomla",
-    level: 45,
-  },
-  {
-    langue: "React Js",
-    level: 35,
+    langue: "Javascript",
+    level: 65,
   },
 ];
 const is_even = "is_even";

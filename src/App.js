@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
-import "./sass/mystyles.scss";
-// import "./css/mystyles.css";
+// import "./sass/mystyles.scss";
+import "./css/mystyles.css";
 import { Section } from "react-bulma-components";
 
 import React from "react";
