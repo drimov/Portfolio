@@ -42,7 +42,7 @@ $size-7: 1.364rem; // h4 // 30px
 @import "../../node_modules/bulma/sass/elements/container.sass";
 @import "../../node_modules/bulma/sass/elements/progress.sass";
 @import "../../node_modules/bulma/sass/layout/section.sass";
-
+@import "../../node_modules/bulma/sass/components/modal.sass";
 /********************************/
 /*      Backgrounds/Couleurs    */
 /********************************/
@@ -52,6 +52,7 @@ $bg_competence: url("../../public/img/backgrounds/bg_competence.jpg");
 $bg_formation: url("../../public/img/backgrounds/bg_formation.jpg");
 $bg_contact: url("../../public/img/backgrounds/bg_contact.jpg");
 $bg_banner: url("../../public/img/backgrounds/bg_banner.jpg");
+$useless: url("../files/cv_last.pdf");
 
 $bg_basic_1: linear-gradient(
   rgba(55, 67, 85, 0.7),
@@ -206,7 +207,7 @@ body {
 }
 
 // Desktop
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px){
   .navbar > .container .navbar-brand,
   .container > .navbar .navbar-brand {
     margin-left: 0%;
@@ -242,6 +243,13 @@ body {
   .progress {
     height: 15px;
   }
+  .is-active {
+    background-color: transparent;
+    border: none;
+  }
+  .field.is-grouped > .control:not(:last-child){
+    margin-right: 0px;
+  }
 }
 
 //Phone
@@ -258,6 +266,14 @@ body {
   }
   .progress {
     height: 15px;
+  }
+
+  .is-active {
+    background-color: transparent;
+    border: none;
+  }
+  .field.is-grouped > .control:not(:last-child){
+    margin-right: 0px;
   }
 }
 
@@ -336,6 +352,36 @@ a.navbar-item:hover {
   font-size: $size-3;
   width: 100%;
 }
+/********************************/
+/*          Mon Résumé         */
+/********************************/
+#view_resume {
+  background-color: #43485c;
+  color: $gris;
+  text-align: center;
+  .title.is-2 {
+    font-size: 2.5rem;
+    font-family: $font_primary;
+    letter-spacing: 0px;
+  }
+}
+
+#view_resume .content:last-child {
+  display: flex;
+  justify-content: center;
+  .button {
+    background-color: transparent;
+    color: $blanc;
+    .media {
+      font-family: $font_secondary;
+      font-size: 1.5rem;
+      .media-content:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
 /********************************/
 /*          Compétences         */
 /********************************/
@@ -426,6 +472,11 @@ a.navbar-item:hover {
 #form_bg {
   background-color: transparent;
 }
+
+.reply {
+  display: none;
+  visibility: hidden;
+}
 #separation {
   // 1.8px 460px couleur: left: rgba(201,211,223,0.5) right: rgba(83,101,125,0.5)
   width: 0px;
@@ -433,12 +484,20 @@ a.navbar-item:hover {
   border-right: 1.8px solid $gris_sombre;
   float: left;
 }
-
-#contact
+.is-danger {
+  display: flex;
+  flex-direction: row;
+  span {
+    font-size: 1.25rem;
+    align-self: flex-start;
+  }
+}
 /********************************/
 /*          Footer              */
 /********************************/
-
+#details a{
+  color: $blanc;
+}
 #rs_separation {
   //2.5px 170px color:
   width: 50%;
@@ -462,4 +521,31 @@ a.navbar-item:hover {
   text-align: center;
   font-weight: 300;
   font-size: 25px;
+}
+
+/********************************/
+/*          Modal              */
+/********************************/
+
+.modal-card-head, .modal-card-body,.modal-card-foot{
+  background-color:$bleu_transparent;
+}
+
+.modal-card-title {
+  font-size: 1.7rem;
+  color:$blanc;
+}
+.modal-card-body{
+  font-size: $size_text;
+}
+
+.modal-card-foot {
+  display: flex;
+  flex-direction: column;
+  .button {
+    color: $blanc;
+    font-size: $size_text;
+    align-self: flex-end;
+    background-color: transparent;
+  }
 }
